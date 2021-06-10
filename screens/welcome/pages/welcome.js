@@ -17,10 +17,17 @@ function Welcome(props) {
         <Text style={style.textStyle}>Coinbase</Text>
         <Text style={style.textStyle}>Clone</Text>
         {visible && (
-          <View>
-            <Button text="Get Started" disabled={false} />
+          <View style={style.bottomView}>
+            <Button
+              btnStyle={style.btnStyle}
+              btnTextStyle={style.btnTextStyle}
+              text="Get Started"
+              onPress={() => navigation.navigate("CreateAccount")}
+              disabled={false}
+            />
             <Button
               text="Sign In"
+              btnTextStyle={style.btnStyle2}
               disabled={false}
               onPress={() => navigation.navigate("Login")}
             />
